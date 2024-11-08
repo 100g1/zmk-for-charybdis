@@ -25,6 +25,43 @@
         };
     };
 
+    macros {
+        red_macro: red_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(M) &kp R>;
+            label = "RED_MACRO";
+        };
+
+        black_macro: black_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(M) &kp K>;
+            label = "BLACK_MACRO";
+        };
+
+        add_macro: add_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(N) &kp N>;
+            label = "ADD_MACRO";
+        };
+
+        bubble_macro: bubble_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS &kp LEFT>;
+            label = "BUBBLE_MACRO";
+        };
+
+        table_macro: table_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(N) &kp T>;
+            label = "TABLE_MACRO";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -32,16 +69,16 @@
             bindings = <
 &none  &none             &none        &none           &none           &none        &none      &none          &none      &none    &none      &none
 &none  &kp Q             &kp W        &kp E           &kp R           &kp T        &kp Y      &kp U          &kp I      &kp O    &kp P      &none
-&none  &mt LEFT_SHIFT A  &mt LCTRL S  &mt LEFT_ALT D  &mt LEFT_WIN F  &lt 4 G      &kp H      &kp J          &kp K      &kp L    &kp SQT    &none
+&none  &mt LEFT_SHIFT A  &mt LCTRL S  &mt LEFT_ALT D  &mt LEFT_WIN F  &lt 5 G      &kp H      &kp J          &kp K      &kp L    &kp SQT    &none
 &none  &kp Z             &kp X        &kp C           &kp V           &kp B        &kp N      &kp M          &kp COMMA  &kp DOT  &kp SLASH  &none
-                                      &mo 7           &mo 4           &kp SPACE    &kp ENTER  &kp BACKSPACE
+                                      &mo 8           &mo 5           &kp SPACE    &kp ENTER  &kp BACKSPACE
                                                       &none           &none        &none
             >;
 
             trackball-bindings = <&tmv_coarse>;
         };
 
-        layer_7 {
+        nav_num {
             bindings = <
 &trans  &trans          &trans        &trans     &trans        &trans                               &trans                       &trans                     &trans                     &trans                     &trans  &trans
 &trans  &sk LEFT_SHIFT  &kp UP_ARROW  &sk LCTRL  &kp LEFT_GUI  &mt LS(GRAVE) GRAVE                  &mt LS(MINUS) MINUS          &mt LS(N7) N7              &mt LS(N8) N8              &mt LS(N9) N9              &trans  &trans
@@ -52,14 +89,25 @@
             >;
         };
 
-        num {
+        hwp {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp F1  &kp F2  &kp F3  &kp F4  &kp F4    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
                         &trans  &trans  &trans    &trans  &trans
                                 &trans  &trans    &trans
+            >;
+        };
+
+        num {
+            bindings = <
+&trans  &trans            &trans            &trans            &trans            &trans        &trans            &trans  &trans  &trans  &trans  &trans
+&trans  &kp LC(NUMBER_1)  &kp LC(NUMBER_2)  &kp LC(NUMBER_3)  &kp LC(NUMBER_4)  &kp LC(N5)    &kp LC(NUMBER_6)  &trans  &trans  &trans  &trans  &trans
+&trans  &trans            &trans            &trans            &trans            &trans        &trans            &trans  &trans  &trans  &trans  &trans
+&trans  &trans            &trans            &trans            &trans            &trans        &trans            &trans  &trans  &trans  &trans  &trans
+                                            &trans            &trans            &trans        &trans            &trans
+                                                              &trans            &trans        &trans
             >;
         };
 
@@ -79,7 +127,7 @@
 &none        &none         &none         &none         &none      &none         &none       &none      &none         &none         &none         &none
 &none        &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &none      &bt BT_CLR    &bt BT_CLR  &none      &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &none
 &none        &trans        &trans        &mkp MCLK     &trans     &none         &none       &trans     &mkp MCLK     &trans        &trans        &none
-&bootloader  &trans        &mkp RCLK     &mo 5         &mkp LCLK  &mo 1         &mo 1       &mkp LCLK  &mo 5         &mkp RCLK     &trans        &bootloader
+&bootloader  &trans        &mkp RCLK     &mo 6         &mkp LCLK  &mo 1         &mo 1       &mkp LCLK  &mo 6         &mkp RCLK     &trans        &bootloader
                                          &mo 1         &mkp LCLK  &mkp RCLK     &mkp RCLK   &mkp LCLK
                                                        &none      &trans        &trans
             >;

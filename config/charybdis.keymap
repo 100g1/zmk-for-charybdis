@@ -59,7 +59,7 @@
         comb_sd {
             bindings = <&kp LA(S)>;
             key-positions = <27 26>;
-            layers = <2>;
+            layers = <0>;
         };
     };
 

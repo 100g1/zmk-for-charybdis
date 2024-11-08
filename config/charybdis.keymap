@@ -50,11 +50,6 @@
             require-prior-idle-ms = <2>;
             timeout-ms = <2>;
         };
-
-        comb_sd {
-            bindings = <&kp LA(S)>;
-            key-positions = <27 26>;
-        };
     };
 
     macros {

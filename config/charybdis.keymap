@@ -18,42 +18,7 @@
 };
 
 / {
-    combos {
-        compatible = "zmk,combos";
-
-        comb_bubble {
-            bindings = <&bubble_macro>;
-            key-positions = <21 22>;
-        };
-
-        comb_cv {
-            bindings = <&kp LC(C)>;
-            key-positions = <39 40>;
-            require-prior-idle-ms = <2>;
-            timeout-ms = <0>;
-        };
-
-        comb_vb {
-            bindings = <&kp LC(V)>;
-            key-positions = <40 41>;
-            require-prior-idle-ms = <2>;
-            timeout-ms = <0>;
-        };
-
-        comb_zx {
-            bindings = <&kp LC(Z)>;
-            key-positions = <37 38>;
-            require-prior-idle-ms = <2>;
-            timeout-ms = <0>;
-        };
-
-        comb_xc {
-            bindings = <&kp LC(X)>;
-            key-positions = <38 39>;
-            require-prior-idle-ms = <2>;
-            timeout-ms = <0>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     macros {
         red_macro: red_macro {

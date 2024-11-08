@@ -10,8 +10,8 @@
 };
 
 &mt {
-    flavor = "balanced";
-    tapping-term-ms = <250>;
+    flavor = "tap-preferred";
+    tapping-term-ms = <200>;
 };
 
 / {
@@ -22,6 +22,50 @@
             bindings = <&kp ESC>;
             key-positions = <17 18>;
             layers = <0>;
+        };
+
+        comb_bubble {
+            bindings = <&bubble_macro>;
+            key-positions = <21 22>;
+            layers = <0>;
+        };
+
+        comb_cv {
+            bindings = <&kp LC(C)>;
+            key-positions = <39 40>;
+            require-prior-idle-ms = <2>;
+            timeout-ms = <2>;
+            layers = <0>;
+        };
+
+        comb_vb {
+            bindings = <&kp LC(V)>;
+            key-positions = <40 41>;
+            require-prior-idle-ms = <2>;
+            timeout-ms = <2>;
+            layers = <0>;
+        };
+
+        comb_zx {
+            bindings = <&kp LC(Z)>;
+            key-positions = <37 38>;
+            require-prior-idle-ms = <2>;
+            timeout-ms = <2>;
+            layers = <0>;
+        };
+
+        comb_xc {
+            bindings = <&kp LC(X)>;
+            key-positions = <37 38>;
+            require-prior-idle-ms = <2>;
+            timeout-ms = <2>;
+            layers = <0>;
+        };
+
+        comb_sd {
+            bindings = <&kp LA(S)>;
+            key-positions = <27 26>;
+            layers = <2>;
         };
     };
 
@@ -69,9 +113,9 @@
             bindings = <
 &none  &none             &none        &none           &none           &none        &none      &none          &none      &none    &none      &none
 &none  &kp Q             &kp W        &kp E           &kp R           &kp T        &kp Y      &kp U          &kp I      &kp O    &kp P      &none
-&none  &mt LEFT_SHIFT A  &mt LCTRL S  &mt LEFT_ALT D  &mt LEFT_WIN F  &lt 5 G      &kp H      &kp J          &kp K      &kp L    &kp SQT    &none
+&none  &mt LEFT_SHIFT A  &mt LCTRL S  &mt LEFT_ALT D  &mt LEFT_WIN F  &lt 3 G      &kp H      &kp J          &kp K      &kp L    &kp SQT    &none
 &none  &kp Z             &kp X        &kp C           &kp V           &kp B        &kp N      &kp M          &kp COMMA  &kp DOT  &kp SLASH  &none
-                                      &mo 8           &mo 5           &kp SPACE    &kp ENTER  &kp BACKSPACE
+                                      &mo 2           &mo 1           &kp SPACE    &kp ENTER  &kp BACKSPACE
                                                       &none           &none        &none
             >;
 
@@ -91,83 +135,24 @@
 
         hwp {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans
-                                &trans  &trans    &trans
+&trans  &trans  &trans  &trans  &trans      &trans          &trans      &trans  &trans        &trans  &trans       &trans
+&trans  &trans  &trans  &trans  &red_macro  &table_macro    &trans      &trans  &trans        &trans  &trans       &trans
+&trans  &trans  &trans  &trans  &trans      &trans          &trans      &trans  &black_macro  &trans  &kp LA(INS)  &trans
+&trans  &trans  &trans  &trans  &trans      &trans          &add_macro  &trans  &trans        &trans  &trans       &trans
+                        &trans  &trans      &trans          &trans      &trans
+                                &trans      &trans          &trans
             >;
         };
 
-        num {
+        fn {
             bindings = <
-&trans  &trans            &trans            &trans            &trans            &trans        &trans            &trans  &trans  &trans  &trans  &trans
-&trans  &kp LC(NUMBER_1)  &kp LC(NUMBER_2)  &kp LC(NUMBER_3)  &kp LC(NUMBER_4)  &kp LC(N5)    &kp LC(NUMBER_6)  &trans  &trans  &trans  &trans  &trans
-&trans  &trans            &trans            &trans            &trans            &trans        &trans            &trans  &trans  &trans  &trans  &trans
-&trans  &trans            &trans            &trans            &trans            &trans        &trans            &trans  &trans  &trans  &trans  &trans
-                                            &trans            &trans            &trans        &trans            &trans
-                                                              &trans            &trans        &trans
+&trans  &trans          &trans        &trans        &trans        &trans    &trans     &trans     &trans     &trans  &trans       &trans
+&trans  &kp F1          &kp F2        &kp F3        &kp F4        &kp F5    &kp F6     &kp F7     &kp F8     &kp F9  &kp F10      &trans
+&trans  &bt BT_CLR_ALL  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 3  &trans    &mkp MB4   &mkp MB5   &trans     &trans  &trans       &trans
+&trans  &bootloader     &trans        &trans        &trans        &trans    &mkp LCLK  &mkp RCLK  &mkp MCLK  &trans  &bootloader  &trans
+                                      &trans        &trans        &trans    &trans     &trans
+                                                    &trans        &trans    &trans
             >;
-        };
-
-        layer_2 {
-            bindings = <
-&kp F12           &kp F1      &kp F2      &kp F3         &kp F4         &kp F5          &kp F6        &kp F7         &kp F8    &kp F9     &kp F10  &kp F11
-&kp LS(GRAVE)     &kp LS(N1)  &kp LS(N2)  &kp LS(N3)     &kp LS(N4)     &kp LS(LBKT)    &kp LS(RBKT)  &none          &trans    &none      &none    &trans
-&kp LEFT_CONTROL  &kp LS(N5)  &kp LS(N6)  &kp LS(N7)     &kp LS(N8)     &none           &kp LS(BSLH)  &trans         &kp UP    &trans     &trans   &trans
-&kp LEFT_SHIFT    &kp LS(N9)  &kp LS(N0)  &kp LS(MINUS)  &kp LS(EQUAL)  &none           &none         &kp LEFT       &kp DOWN  &kp RIGHT  &none    &trans
-                                          &kp LEFT_ALT   &kp SPACE      &kp ENTER       &trans        &kp BACKSPACE
-                                                         &trans         &trans          &none
-            >;
-        };
-
-        Mouse {
-            bindings = <
-&none        &none         &none         &none         &none      &none         &none       &none      &none         &none         &none         &none
-&none        &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &none      &bt BT_CLR    &bt BT_CLR  &none      &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &none
-&none        &trans        &trans        &mkp MCLK     &trans     &none         &none       &trans     &mkp MCLK     &trans        &trans        &none
-&bootloader  &trans        &mkp RCLK     &mo 6         &mkp LCLK  &mo 1         &mo 1       &mkp LCLK  &mo 6         &mkp RCLK     &trans        &bootloader
-                                         &mo 1         &mkp LCLK  &mkp RCLK     &mkp RCLK   &mkp LCLK
-                                                       &none      &trans        &trans
-            >;
-        };
-
-        layer_4 {
-            bindings = <
-&trans  &trans  &trans     &trans     &trans     &trans       &trans     &trans     &trans     &trans     &trans  &trans
-&trans  &trans  &trans     &trans     &trans     &trans       &trans     &trans     &trans     &trans     &trans  &trans
-&trans  &trans  &trans     &mkp MCLK  &trans     &trans       &trans     &trans     &mkp MCLK  &trans     &trans  &trans
-&trans  &trans  &mkp RCLK  &trans     &mkp LCLK  &trans       &trans     &mkp LCLK  &trans     &mkp RCLK  &trans  &trans
-                           &trans     &mkp LCLK  &mkp RCLK    &mkp RCLK  &mkp LCLK
-                                      &trans     &trans       &trans
-            >;
-
-            trackball-bindings = <&tsl>;//滚轮层
-        };
-
-        layer_1 {
-            bindings = <
-&none      &kp EXCLAMATION  &kp HASH      &kp DOLLAR    &kp DOLLAR    &kp PERCENT    &kp CARET  &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDERSCORE
-&none      &kp NUMBER_1     &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp LBKT       &kp RBKT   &kp F1         &kp F2        &kp F3                &kp F4                 &kp DEL
-&none      &kp NUMBER_5     &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &none          &kp BSLH   &kp F5         &kp F6        &kp F7                &kp F8                 &kp PAGE_UP
-&kp LSHFT  &kp NUMBER_9     &kp NUMBER_0  &kp MINUS     &kp EQUAL     &none          &trans     &kp F9         &kp F10       &kp F11               &kp F12                &kp PAGE_DOWN
-                                          &kp LEFT_WIN  &kp SPACE     &trans         &kp ENTER  &kp BACKSPACE
-                                                        &none         &none          &trans
-            >;
-        };
-
-        layer_5 {
-            bindings = <
-&trans  &trans  &trans     &trans     &trans     &trans       &trans     &trans     &trans     &trans     &trans  &trans
-&trans  &trans  &trans     &trans     &trans     &trans       &trans     &trans     &trans     &trans     &trans  &trans
-&trans  &trans  &trans     &mkp MCLK  &trans     &trans       &trans     &trans     &mkp MCLK  &trans     &trans  &trans
-&trans  &trans  &mkp RCLK  &trans     &mkp LCLK  &trans       &trans     &mkp LCLK  &trans     &mkp RCLK  &trans  &trans
-                           &trans     &mkp LCLK  &mkp RCLK    &mkp RCLK  &mkp LCLK
-                                      &trans     &trans       &trans
-            >;
-
-            trackball-bindings = <&tmv_fine>;//精准指针层
         };
     };
 };

@@ -21,7 +21,6 @@
         comb_bubble {
             bindings = <&bubble_macro>;
             key-positions = <21 22>;
-            layers = <0>;
         };
 
         comb_cv {
@@ -29,7 +28,6 @@
             key-positions = <39 40>;
             require-prior-idle-ms = <2>;
             timeout-ms = <2>;
-            layers = <0>;
         };
 
         comb_vb {
@@ -37,7 +35,6 @@
             key-positions = <40 41>;
             require-prior-idle-ms = <2>;
             timeout-ms = <2>;
-            layers = <0>;
         };
 
         comb_zx {
@@ -45,7 +42,6 @@
             key-positions = <37 38>;
             require-prior-idle-ms = <2>;
             timeout-ms = <2>;
-            layers = <0>;
         };
 
         comb_xc {
@@ -53,13 +49,11 @@
             key-positions = <38 39>;
             require-prior-idle-ms = <2>;
             timeout-ms = <2>;
-            layers = <0>;
         };
 
         comb_sd {
             bindings = <&kp LA(S)>;
             key-positions = <27 26>;
-            layers = <0>;
         };
     };
 

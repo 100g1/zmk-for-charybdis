@@ -75,12 +75,12 @@
 
         Base {
             bindings = <
-&none  &none             &none        &none           &none           &none         &none      &none          &none      &none        &none                &none
-&none  &mt LS(Q) Q       &mt LS(W) W  &mt LS(E) E     &mt LS(R) R     &kp T         &kp Y      &kp U          &kp I      &mt LS(O) O  &mt LS(P) P          &none
-&none  &mt LEFT_SHIFT A  &mt LCTRL S  &mt LEFT_ALT D  &mt LEFT_WIN F  &kp G         &kp H      &kp J          &kp K      &kp L        &mt LS(SQT) SQT      &none
-&none  &kp Z             &kp X        &kp C           &kp V           &kp B         &kp N      &kp M          &kp COMMA  &kp DOT      &mt LS(SLASH) SLASH  &none
-                                      &mo 2           &mo 1           &lt 3 BSPC    &kp ENTER  &kp BACKSPACE
-                                                      &none           &none         &none
+&none  &none             &none        &none           &none           &none          &none      &none          &none      &none        &none                &none
+&none  &mt LS(Q) Q       &mt LS(W) W  &mt LS(E) E     &mt LS(R) R     &kp T          &kp Y      &kp U          &kp I      &mt LS(O) O  &mt LS(P) P          &none
+&none  &mt LEFT_SHIFT A  &mt LCTRL S  &mt LEFT_ALT D  &mt LEFT_WIN F  &kp G          &kp H      &kp J          &kp K      &kp L        &mt LS(SQT) SQT      &none
+&none  &kp Z             &kp X        &kp C           &kp V           &kp B          &kp N      &kp M          &kp COMMA  &kp DOT      &mt LS(SLASH) SLASH  &none
+                                      &mo 2           &mo 1           &lt 3 SPACE    &kp ENTER  &kp BACKSPACE
+                                                      &none           &none          &none
             >;
 
             trackball-bindings = <&tmv_coarse>;

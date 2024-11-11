@@ -103,6 +103,7 @@
                                       &mo 2           &mo 1           &kp SPACE    &kp ENTER  &kp BACKSPACE
                                                       &none           &none        &none
             >;
+            trackball-bindings = <&tmv_coarse>;
         };
 
         nav_num {

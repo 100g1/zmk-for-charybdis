@@ -27,35 +27,35 @@
             bindings = <&kp LC(Z)>;
             key-positions = <37 38>;
             require-prior-idle-ms = <0>;
-            timeout-ms = <0>;
+            timeout-ms = <50>;
         };
 
         comb_xc {
             bindings = <&kp K_CUT>;
             key-positions = <38 39>;
-            require-prior-idle-ms = <0>;
-            timeout-ms = <0>;
+            require-prior-idle-ms = <30>;
+            timeout-ms = <50>;
         };
 
         comb_cv {
             bindings = <&kp K_COPY>;
             key-positions = <39 40>;
-            require-prior-idle-ms = <0>;
-            timeout-ms = <0>;
+            require-prior-idle-ms = <30>;
+            timeout-ms = <50>;
         };
 
         comb_vb {
             bindings = <&kp K_PASTE>;
             key-positions = <40 41>;
-            require-prior-idle-ms = <0>;
-            timeout-ms = <0>;
+            require-prior-idle-ms = <30>;
+            timeout-ms = <50>;
         };
 
         comb_bubble {
             bindings = <&bubble_macro>;
             key-positions = <21 22>;
-            require-prior-idle-ms = <0>;
-            timeout-ms = <0>;
+            require-prior-idle-ms = <30>;
+            timeout-ms = <50>;
         };
     };
 

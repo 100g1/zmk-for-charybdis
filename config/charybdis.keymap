@@ -4,14 +4,13 @@
 #include <dt-bindings/zmk/mouse.h>
 
 &lt {
-    tapping-term-ms = <250>;
-    flavor = "balanced";
+    flavor = "tap-preferred";
     quick-tap-ms = <150>;
 };
 
 &mt {
     flavor = "tap-preferred";
-    tapping-term-ms = <200>;
+    tapping-term-ms = <190>;
 };
 
 &sk {
@@ -27,6 +26,7 @@
         comb_zx {
             bindings = <&kp LC(Z)>;
             key-positions = <37 38>;
+            require-prior-idle-ms = <2>;
         };
 
         comb_xc {

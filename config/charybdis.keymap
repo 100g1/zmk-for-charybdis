@@ -21,7 +21,38 @@
 };
 
 / {
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        comb_zx {
+            bindings = <&kp LC(Z)>;
+            key-positions = <37 38>;
+        };
+
+        comb_xc {
+            bindings = <&kp K_CUT>;
+            key-positions = <38 39>;
+            require-prior-idle-ms = <2>;
+        };
+
+        comb_cv {
+            bindings = <&kp K_COPY>;
+            key-positions = <39 40>;
+            require-prior-idle-ms = <2>;
+        };
+
+        comb_vb {
+            bindings = <&kp K_PASTE>;
+            key-positions = <40 41>;
+            require-prior-idle-ms = <2>;
+        };
+
+        comb_bubble {
+            bindings = <&bubble_macro>;
+            key-positions = <21 22>;
+            require-prior-idle-ms = <2>;
+        };
+    };
 
     macros {
         red_macro: red_macro {
@@ -65,10 +96,10 @@
 
         Base {
             bindings = <
-&none  &none             &none        &none           &none           &none        &none      &none          &none      &none    &none      &none
-&none  &kp Q             &kp W        &kp E           &kp R           &kp T        &kp Y      &kp U          &kp I      &kp O    &kp P      &none
-&none  &mt LEFT_SHIFT A  &mt LCTRL S  &mt LEFT_ALT D  &mt LEFT_WIN F  &lt 3 G      &kp H      &kp J          &kp K      &kp L    &kp SQT    &none
-&none  &kp Z             &kp X        &kp C           &kp V           &kp B        &kp N      &kp M          &kp COMMA  &kp DOT  &kp SLASH  &none
+&none  &none             &none        &none           &none           &none        &none      &none          &none      &none        &none                &none
+&none  &mt LS(Q) Q       &mt LS(W) W  &mt LS(E) E     &mt LS(R) R     &kp T        &kp Y      &kp U          &kp I      &mt LS(O) O  &mt LS(P) P          &none
+&none  &mt LEFT_SHIFT A  &mt LCTRL S  &mt LEFT_ALT D  &mt LEFT_WIN F  &lt 3 G      &kp H      &kp J          &kp K      &kp L        &mt LS(SQT) SQT      &none
+&none  &kp Z             &kp X        &kp C           &kp V           &kp B        &kp N      &kp M          &kp COMMA  &kp DOT      &mt LS(SLASH) SLASH  &none
                                       &mo 2           &mo 1           &kp SPACE    &kp ENTER  &kp BACKSPACE
                                                       &none           &none        &none
             >;

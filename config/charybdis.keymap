@@ -86,36 +86,36 @@
             trackball-bindings = <&tmv_coarse>;
         };
 
-        nav_num {
+        num {
             bindings = <
-&trans  &trans          &trans        &trans     &trans        &trans                               &trans                       &trans                     &trans                     &trans                     &trans  &trans
-&trans  &sk LEFT_SHIFT  &kp UP_ARROW  &sk LCTRL  &kp LEFT_GUI  &mt LS(GRAVE) GRAVE                  &mt LS(MINUS) MINUS          &mt LS(N7) N7              &mt LS(N8) N8              &mt LS(N9) N9              &trans  &trans
-&trans  &kp LEFT_ARROW  &kp DOWN      &kp RIGHT  &trans        &mt LS(LEFT_BRACKET) LEFT_BRACKET    &mt LS(EQUAL) EQUAL          &mt LS(NUMBER_4) NUMBER_4  &mt LS(N5) N5              &mt LS(NUMBER_6) NUMBER_6  &trans  &trans
-&trans  &trans          &trans        &trans     &trans        &mt LS(RIGHT_BRACKET) RBKT           &mt LS(SEMICOLON) SEMICOLON  &mt LS(NUMBER_1) NUMBER_1  &mt LS(NUMBER_2) NUMBER_2  &mt LS(NUMBER_3) NUMBER_3  &trans  &trans
-                                      &trans     &trans        &trans                               &kp TAB                      &mt LS(N0) N0
-                                                 &trans        &trans                               &trans
+&trans  &trans  &trans  &trans  &trans  &trans                               &trans                       &trans                     &trans                     &trans                     &trans   &trans
+&trans  &trans  &trans  &trans  &trans  &mt LS(GRAVE) GRAVE                  &mt LS(MINUS) MINUS          &mt LS(N7) N7              &mt LS(N8) N8              &mt LS(N9) N9              &kp DEL  &trans
+&trans  &trans  &trans  &trans  &trans  &mt LS(LEFT_BRACKET) LEFT_BRACKET    &mt LS(EQUAL) EQUAL          &mt LS(NUMBER_4) NUMBER_4  &mt LS(N5) N5              &mt LS(NUMBER_6) NUMBER_6  &kp INS  &trans
+&trans  &trans  &trans  &trans  &trans  &mt LS(RIGHT_BRACKET) RBKT           &mt LS(SEMICOLON) SEMICOLON  &mt LS(NUMBER_1) NUMBER_1  &mt LS(NUMBER_2) NUMBER_2  &mt LS(NUMBER_3) NUMBER_3  &trans   &trans
+                        &trans  &trans  &trans                               &kp TAB                      &mt LS(N0) N0
+                                &trans  &trans                               &trans
             >;
         };
 
-        hwp {
+        nav {
             bindings = <
-&trans  &trans  &trans  &trans  &trans      &trans          &trans      &trans  &trans        &trans  &trans       &trans
-&trans  &trans  &trans  &trans  &red_macro  &table_macro    &trans      &trans  &trans        &trans  &trans       &trans
-&trans  &trans  &trans  &trans  &trans      &trans          &trans      &trans  &black_macro  &trans  &kp LA(INS)  &trans
-&trans  &trans  &trans  &trans  &trans      &trans          &add_macro  &trans  &trans        &trans  &trans       &trans
-                        &trans  &trans      &trans          &trans      &trans
-                                &trans      &trans          &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans    &trans        &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans    &kp UP_ARROW  &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &kp LEFT  &kp DOWN      &kp RIGHT  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans    &trans        &trans     &trans
+                        &trans  &trans  &trans    &trans  &trans
+                                &trans  &trans    &trans
             >;
         };
 
         fn {
             bindings = <
-&trans  &trans       &trans        &trans        &trans  &trans      &trans    &trans    &trans  &trans  &trans       &trans
-&trans  &kp F1       &kp F2        &kp F3        &kp F4  &kp F5      &kp F6    &kp F7    &kp F8  &kp F9  &kp F10      &trans
-&trans  &bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1  &trans  &mkp MB1    &mkp MB3  &trans    &trans  &trans  &trans       &trans
-&trans  &bootloader  &trans        &trans        &trans  &mkp MB2    &mkp MB4  &mkp MB5  &trans  &trans  &bootloader  &trans
-                                   &trans        &trans  &trans      &trans    &trans
-                                                 &trans  &trans      &trans
+&trans  &trans        &trans        &trans        &trans      &trans       &trans    &trans  &trans  &trans  &trans       &trans
+&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_CLR  &trans       &trans    &kp F7  &kp F8  &kp F9  &trans       &trans
+&trans  &trans        &trans        &trans        &trans      &mkp RCLK    &mkp MB5  &kp F4  &kp F5  &kp F6  &trans       &trans
+&trans  &bootloader   &trans        &trans        &trans      &mkp MB1     &mkp MB4  &kp F1  &kp F2  &kp F3  &bootloader  &trans
+                                    &trans        &trans      &trans       &trans    &trans
+                                                  &trans      &trans       &trans
             >;
         };
     };
